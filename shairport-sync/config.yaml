@@ -1,0 +1,23 @@
+name: Shairport Sync
+slug: shairport_sync
+version: "1.0.0"
+description: AirPlay audio receiver (Shairport Sync) for Home Assistant OS
+arch:
+  - aarch64
+  - armv7
+  - armhf
+  - amd64
+startup: services
+boot: auto
+host_network: true
+audio: true
+
+options:
+  name: "HA AirPlay"
+  output_device: "default"
+  enable_airplay2: false
+
+schema:
+  name: str
+  output_device: str
+  enable_airplay2: bool
